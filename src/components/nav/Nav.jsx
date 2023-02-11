@@ -1,25 +1,25 @@
 import React from "react";
-import { Box, Image } from "@chakra-ui/react";
+
 import { Link } from "react-router-dom";
 import LogoNav from ".././assets/Logo (1).png";
 
 const Nav = () => {
   return (
-    <Box className="nav">
-      <Box className="log-con">
-        <Image src={LogoNav} alt="LOGO" />
+    <div className="nav">
+      <div className="log-con">
+        <img src={LogoNav} alt="LOGO" />
         <span>igbobo</span>
-      </Box>
-      <Box className="menu-con">
+      </div>
+      <div className="menu-con">
         <ul>
           <li>Shop</li>
           <li>Plant care</li>
           <li>Worh-shop</li>
           <li>Blog</li>
         </ul>
-      </Box>
-      <Box className="cart-con"></Box>
-    </Box>
+      </div>
+      <div className="cart-con"></div>
+    </div>
   );
 };
 export default Nav;
