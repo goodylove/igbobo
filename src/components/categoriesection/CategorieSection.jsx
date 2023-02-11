@@ -61,7 +61,7 @@ const Categoriesection = () => {
           <span>Rating</span>
           <div className="wrap-rating">
             <ul>
-              <li>
+              <li style={{ width: 30 }}>
                 <input type="checkbox" checked />
               </li>
               <li>
@@ -86,9 +86,11 @@ const Categoriesection = () => {
       </div>
       <div className="promo-wrap">
         <div className="promo">
-          <h3>Get 30% off</h3>
-          <p>share your refferal code and get a discount</p>
-          <div className="set-share">share</div>
+          <div className="cont">
+            <h3>Get 30% off</h3>
+            <p>share your refferal code and get a discount</p>
+            <div className="set-share">share</div>
+          </div>
         </div>
       </div>
     </div>

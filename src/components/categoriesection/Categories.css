@@ -15,7 +15,7 @@ input[type="checkbox"]{
         text-align: start;
         border-bottom: 1px solid gray;
         font-size: 20px;
-        padding: 1rem 1rem;
+        padding: 0.5rem 1rem;
     }
     .con{
         display: flex;
@@ -84,7 +84,7 @@ input[type="checkbox"]{
     width: 90px;
     margin: 0.9rem 0;
        
-       padding:0.2rem  0.6rem;
+       padding: 0.3rem 0.6rem;
        border-radius: 10px;
        background-color: #47A358; 
        text-align: center;
@@ -135,27 +135,31 @@ display: flex;
         width: 100%;
 }
 .promo{
-width: 205px;
-    height: 110px;
+width: 140px;
+    height: 100px;
     background-color: #00875E;
     margin: 1rem 1.9rem;
     border-radius: 44px;
-    text-align: center;
+    text-align: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 0.7rem;
+  
+    padding: 1rem;
     color: #FFFF;
 }
 .set-share{
     width: 90px;
         margin: 0.9rem 0;
-    
+    text-align: start;
         padding: 0.4rem 0.6rem;
         border-radius: 10px;
         background-color: #FFC327;
         text-align: center;
         color: #FFFF;
 
+}
+.cont{
+    padding: 0 1rem;
+        font-size: 13px;
 }
