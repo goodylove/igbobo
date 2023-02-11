@@ -32,7 +32,7 @@ input[type="checkbox"]{
         width: 200px;
         padding: 1rem
     }
-    .categorie span{
+    .categorie .catego{
         font-weight: 500;
     }
     .wrap-list{
@@ -162,4 +162,8 @@ width: 140px;
 .cont{
     padding: 0 1rem;
         font-size: 13px;
+}
+.cont h3{
+    margin-top: 0.2rem ;
+    margin-bottom: 0.2rem;
 }

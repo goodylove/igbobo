@@ -8,7 +8,7 @@ const Categoriesection = () => {
       <div className="filter">Filter</div>
       <div className="con">
         <div className="categorie">
-          <span>Categorie</span>
+          <span className="catego">Categorie</span>
           <div className="wrap-list">
             <ul>
               <li>

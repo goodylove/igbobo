@@ -11,6 +11,10 @@
     align-items: center;
     padding: 0 2rem;
     border-bottom: 2px solid #cbc8c8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: 4rem;
 }
 .log-con{
     display: flex;
@@ -26,13 +30,14 @@
 .menu-con .list{
     display: flex;
     justify-content: center;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 400;
+    font-family: cursive;
 }
 .menu-con .list li{
     padding: 0.8rem;
 }
-.menu-con .list .shop{
+.menu-con .list .shop-shop{
     color: #00875E;
     font-weight: 500;
 }

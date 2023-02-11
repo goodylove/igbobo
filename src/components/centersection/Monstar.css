@@ -1,0 +1,113 @@
+.monster-wrapper{
+    height: 500px;
+    margin-top: 3rem;
+}
+
+
+.sort-con{
+ display: flex;
+ justify-content: space-between;
+ margin: 1rem 0;
+}
+.search-result{
+    text-align: start;
+        margin: 1rem 2rem;
+        width: 300px;
+        padding-left: 2rem;
+    
+}
+.wraper-result{
+    /* width: 50%; */
+    display: flex;
+        justify-content: start;
+        align-items: start;
+        margin-left: 2rem;
+    
+}
+
+.btn{
+    background-color: #00875E;
+    /* width: 95px; */
+    padding: .1rem .2rem;
+    /* margin: 0.2rem 0; */
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+}
+#sel-btn{
+    background-color: #fff;
+    border-radius: 5px;
+    /* color: #fff; */
+    font-size: 12px;
+    padding: .1rem .2rem;
+        margin: 0 0.2rem;
+    
+}
+
+.popular,.news{
+    background-color: #fff;
+        border-radius: 5px;
+        border: 1px solid gainsboro;
+        font-size: 12px;
+        padding: .1rem .2rem;
+            margin: 0 0.2rem;
+    
+}
+.plant-con{
+    display: flex;
+        flex-wrap: wrap;
+    justify-content: center;
+}
+.plan1{
+    border: 1px solid rgb(141, 140, 140);
+    width: 223px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin: 0.3rem;
+    
+}
+.plant-holder{
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+.start-con{
+    text-align: start;
+}
+.stars-c{
+    display: flex;
+}
+.tree-price{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+}
+.pri{
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+.cart-p{
+    
+    padding: 0.2rem;
+    border: 1px solid #00875E;;
+        background-color:#fff;
+        color: #00875E;
+        border-radius: 8px;
+        margin: 1rem;
+    
+}
+.price-am{
+    /* margin-left: 1rem; */
+        background: #97f1d8;
+        font-size: 12px;
+        /* width: 43px;
+        height: 20px; */
+        border-radius: 5px;
+        text-align: center;
+        color: #00875E;
+        padding: 0 2px;
+}
