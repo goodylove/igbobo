@@ -12,18 +12,18 @@ const Nav = () => {
     <div className="nav">
       <div className="log-con">
         <img src={LogoNav} alt="LOGO" />
-        <span>igbobo</span>
+        <span className="igbobo">Igbobo</span>
       </div>
       <div className="menu-con">
-        <ul>
-          <li>Shop</li>
+        <ul className="list">
+          <li className="shop">Shop</li>
           <li>Plant care</li>
           <li>Worh-shop</li>
           <li>Blog</li>
         </ul>
       </div>
       <div className="cart-con">
-        <ul>
+        <ul className="list-cart">
           <li>
             <img src={Cart} alt="" />
           </li>

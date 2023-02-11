@@ -1,0 +1,46 @@
+*{
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    border-bottom: 2px solid #cbc8c8;
+}
+.log-con{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.log-con .igbobo{
+    color: #00875E;
+    font-weight: 500;
+}
+.menu-con .list{
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.menu-con .list li{
+    padding: 0.8rem;
+}
+.menu-con .list .shop{
+    color: #00875E;
+    font-weight: 500;
+}
+.cart-con .list-cart{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.cart-con .list-cart li{
+    padding: 0.4rem;
+}
