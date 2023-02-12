@@ -3,19 +3,22 @@
     justify-content:center;
     width: auto;
     margin-top: 3.8rem;
+    overflow: hidden;
 }
 .wrapper{
-width: 100%;
+width: auto;
 display: flex;
-justify-content: space-between;
+justify-content: center;
 /* align-items: center; */
 }
-/* .cate{
-    width: 40%;
+.cate{
+    /* width: 36%; */
+    width: 403px;
+     max-height:  871px;
 }
 .mon{
-  width: 30%;
+  width: 532px;
 }
 .animate{
-width: 40%;
-} */
+width: 380px;
+}

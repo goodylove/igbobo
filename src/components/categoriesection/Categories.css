@@ -12,11 +12,20 @@ input[type="checkbox"]{
 
     .filter{
         background-color: #FFFf;
-        text-align: start;
+        text-align:left;
         border-bottom: 1px solid gray;
         font-size: 20px;
         padding: 0.5rem 1rem;
+        /* margin-left: 2rem; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
+    .fil{
+        text-align: center;
+        margin-left: 48px;
+    }
+
     .con{
         display: flex;
             flex-direction: column;
@@ -30,7 +39,7 @@ input[type="checkbox"]{
     .categorie{
         border: 1px solid rgb(198, 193, 193);
         width: 200px;
-        padding: 1rem
+        padding: 0  1rem
     }
     .categorie .catego{
         font-weight: 500;
@@ -40,19 +49,28 @@ input[type="checkbox"]{
             justify-content: center;
             align-items: center;
             margin: 0.3rem 0;
+
+    }
+    .wrap-list ul li{
+        padding: 0.3rem;
     }
     .price-range{
         border: 1px solid rgb(209, 206, 206);
         width: 200px;
-        padding: 1rem;
+        padding:0  1rem;
         text-align: center;
        
     }
     .price-range span{
         font-weight: 500;
+        margin: 1rem;
+        /* padding: 1rem; */
+
     }
     .price-range .price-list{
-        display: flex;
+    display: flex;
+        justify-content: center;
+        align-items: baseline;
         
     }
     .wrap-price{
@@ -60,20 +78,22 @@ input[type="checkbox"]{
             justify-content: center;
             flex-direction: column;
             align-items: center;
+            margin: 6px 0;
     }
     .price-list .price{
-        margin-left: 1rem;
-    
+    margin-left: 1rem;
         background: #d1f7ec;
-        font-size: 16px;
-        width: 43px;
-            height: 20px;
-            border-radius: 5px;
-            text-align: center;
+        font-size: 12px;
+        width: 42px;
+        padding: 0.2rem;
+        /* height: 20px; */
+        border-radius: 5px;
+        text-align: center;
 
     }
     .price-list .max{
         border-radius: 5px;
+        padding: 0.2rem;
         border: none;
         width: auto;
         height: auto;
@@ -81,14 +101,14 @@ input[type="checkbox"]{
        margin-left: 1rem;
     }
     .price-range .set-price{
-    width: 90px;
-    margin: 0.9rem 0;
-       
-       padding: 0.3rem 0.6rem;
-       border-radius: 10px;
-       background-color: #47A358; 
-       text-align: center;
-       color: #FFFF;
+margin: 19px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 3px;
+    background-color: #00875E;
+    color: white;
+    width: 102px;
+
     }
 
 .icon-start path{
@@ -106,7 +126,7 @@ width: 200px;
     flex-direction: column;
     /* margin: 0 -0.3rem; */
     border: 1px solid rgb(202, 200, 200);
-    padding: 1rem;
+    padding:0 1rem;
     
 }
 .rating .wrap-rating{
@@ -135,22 +155,22 @@ display: flex;
         width: 100%;
 }
 .promo{
-width: 140px;
-    height: 100px;
+width: 200px;
+    height: 126px;
     background-color: #00875E;
-    margin: 1rem 1.9rem;
+    margin: 1rem 2rem;
     border-radius: 44px;
     text-align: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
   
-    padding: 1rem;
+    /* padding: 1rem; */
     color: #FFFF;
 }
 .set-share{
-    width: 90px;
-        margin: 0.9rem 0;
+    width: 120px;
+        margin: 0.9rem 1rem;
     text-align: start;
         padding: 0.4rem 0.6rem;
         border-radius: 10px;
@@ -163,7 +183,8 @@ width: 140px;
     padding: 0 1rem;
         font-size: 13px;
 }
-.cont h3{
+.cont h3 ,p {
     margin-top: 0.2rem ;
     margin-bottom: 0.2rem;
+    margin-left: 1rem;
 }

@@ -5,7 +5,9 @@ import { AiFillStar } from "react-icons/ai";
 const Categoriesection = () => {
   return (
     <div className="general-wrapper">
-      <div className="filter">Filter</div>
+      <div className="filter">
+        <span className="fil">Filter</span>
+      </div>
       <div className="con">
         <div className="categorie">
           <span className="catego">Categorie</span>
@@ -52,9 +54,9 @@ const Categoriesection = () => {
                   <option value="max">Max</option>
                 </select>
               </li>
-              <li className="price">$40</li>
+              <li className="price">$400</li>
             </ul>
-            <div className="set-price">set price</div>
+            <div className="set-price">Set Price</div>
           </div>
         </div>
         <div className="rating">

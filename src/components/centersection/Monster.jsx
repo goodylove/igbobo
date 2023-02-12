@@ -3,13 +3,16 @@ import SearchImg from "../assets/Group 8.png";
 import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
 import Tree1 from "../assets/tree1.png";
+import Gold from "../assets/gold.png";
+import plant from "../assets/plant.png";
+import leaf from "../assets/leaf.png";
 import "./Monstar.css";
 
 const Monster = () => {
   return (
     <div className="monster-wrapper">
       <div className="search-con">
-        <img src={SearchImg} alt="" width={370} />
+        <img src={SearchImg} alt="" width={320} />
       </div>
       <div className="wraper-result">
         <div className="search-result">
@@ -63,7 +66,7 @@ const Monster = () => {
         </div>
         <div className="plan1">
           <div className="plant-holder">
-            <img src={Tree1} alt="" height={150} />
+            <img src={Gold} alt="" height={150} />
             <div className="start-con">
               <span>Monstar Vr</span>
               <ul className="stars-c">
@@ -98,7 +101,7 @@ const Monster = () => {
         </div>
         <div className="plan1">
           <div className="plant-holder">
-            <img src={Tree1} alt="" height={150} />
+            <img src={leaf} alt="" height={120} />
             <div className="start-con">
               <span>Monstar Vr</span>
               <ul className="stars-c">
@@ -133,7 +136,7 @@ const Monster = () => {
         </div>
         <div className="plan1">
           <div className="plant-holder">
-            <img src={Tree1} alt="" height={150} />
+            <img src={plant} alt="" height={120} />
             <div className="start-con">
               <span>Monstar Vr</span>
               <ul className="stars-c">
