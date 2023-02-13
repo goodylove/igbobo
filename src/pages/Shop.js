@@ -1,6 +1,7 @@
 import React from "react";
 import Categoriesection from "./../components/categoriesection/CategorieSection";
 import Monster from "./../components/centersection/Monster";
+import AddToCart from "./../components/addToCart/AddToCart";
 import "./Shop.css";
 const Shop = () => {
   return (
@@ -13,7 +14,7 @@ const Shop = () => {
           <Monster />
         </div>
         <div className="animate">
-          <Categoriesection />
+          <AddToCart />
         </div>
       </div>
     </div>
