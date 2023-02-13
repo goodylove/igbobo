@@ -12,11 +12,14 @@ const Monster = () => {
   return (
     <div className="monster-wrapper">
       <div className="search-con">
-        <img src={SearchImg} alt="" width={320} />
+        <img src={SearchImg} alt="" width={352} />
       </div>
       <div className="wraper-result">
         <div className="search-result">
-          <span>Search Result For "Monster"</span>
+          <div>
+            <span style={{ color: "gray" }}> Search Result For</span>
+            <span>"Monster"</span>
+          </div>
           <div className="sort-con">
             <span className="sort-text">Sort</span>
             <span className="btn">Relevant</span>
@@ -33,7 +36,7 @@ const Monster = () => {
           <div className="plant-holder">
             <img src={Tree1} alt="" height={150} />
             <div className="start-con">
-              <span>Monstar Vr</span>
+              <span className="tree-name">Monstar Vr</span>
               <ul className="stars-c">
                 <li>
                   <AiFillStar className="icon-start" />
@@ -68,7 +71,7 @@ const Monster = () => {
           <div className="plant-holder">
             <img src={Gold} alt="" height={150} />
             <div className="start-con">
-              <span>Monstar Vr</span>
+              <span className="tree-name">Monstera Delicious</span>
               <ul className="stars-c">
                 <li>
                   <AiFillStar className="icon-start" />
@@ -103,7 +106,7 @@ const Monster = () => {
           <div className="plant-holder">
             <img src={leaf} alt="" height={120} />
             <div className="start-con">
-              <span>Monstar Vr</span>
+              <span className="tree-name">Monstar green</span>
               <ul className="stars-c">
                 <li>
                   <AiFillStar className="icon-start" />
@@ -138,7 +141,7 @@ const Monster = () => {
           <div className="plant-holder">
             <img src={plant} alt="" height={120} />
             <div className="start-con">
-              <span>Monstar Vr</span>
+              <span className="tree-name">Monstar tree</span>
               <ul className="stars-c">
                 <li>
                   <AiFillStar className="icon-start" />

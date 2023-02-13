@@ -18,6 +18,10 @@ justify-content: center;
 }
 .mon{
   width: 532px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: inherit;
 }
 .animate{
 width: 380px;

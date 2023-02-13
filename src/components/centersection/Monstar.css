@@ -1,6 +1,6 @@
 .monster-wrapper{
     height: auto;
-    border: 2px solid red;
+   
     width: auto;
     /* margin-top: 3rem; */
 
@@ -8,23 +8,29 @@
 
 
 .sort-con{
- display: flex;
- justify-content: space-evenly;
- margin: 1rem 0;
+display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    flex-direction: row;
+    width: 100%;
 }
 .search-con{
     margin-top: 2rem;
 }
 .search-result{
         text-align: start;
+            width: 66%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
     
 }
 .wraper-result{
-    /* width: 50%; */
-    /* display: flex;
-        justify-content: start;
-        align-items: start;
-        margin-left: 2rem; */
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     
 }
 
@@ -70,6 +76,8 @@
     border-radius: 10px;
     margin: 0.1rem;
     padding: 1rem;
+    height: 231px;
+    width: 143px;
     
 }
 .plant-holder{
@@ -78,9 +86,18 @@
         justify-content: center;
         align-items: center;
         padding: 10px;
+        height: 100%;
+        width: 100%;
+}
+.tree-name{
+    text-shadow: 1px 2px rgb(224, 221, 221);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 .start-con{
-    text-align: start;
+text-align: start;
+    font-size: 11px;
+    /* margin: 12px 0 */
 }
 .stars-c{
     display: flex;
@@ -88,33 +105,38 @@
 .tree-price{
     display: flex;
         justify-content: center;
-        align-items: center;
+    margin-top: 1rem;
         font-size: 12px;
 }
 .pri{
     display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
+        
 }
 .cart-p{
     
-    padding: 0.2rem;
-    border: 1px solid #00875E;;
-        background-color:#fff;
-        color: #00875E;
-        border-radius: 8px;
-        margin: 1rem;
+border: 1px solid #00875E;
+    background-color: #fff;
+    color: #00875E;
+    border-radius: 8px;
+    margin: 1rem;
+    box-shadow: 3px 3px 3px rgb(196 193 193);
+    width: 64px;
+    padding: 3px 5px;
+    font-weight: 500;
+
     
 }
 .price-am{
-    /* margin-left: 1rem; */
-        background: #97f1d8;
+background: rgba(23, 207, 151, 0.1);
+    border-radius: 8px;
         font-size: 12px;
-        /* width: 43px;
-        height: 20px; */
-        border-radius: 5px;
+       font-weight: 500;
+        padding: 4px 8px;
+            gap: 10px;
         text-align: center;
         color: #00875E;
-        padding: 0 2px;
+        box-shadow: 1px 1px 1px rgb(234, 231, 231) ;
+      
 }

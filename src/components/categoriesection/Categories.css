@@ -136,7 +136,7 @@ width: 200px;
         align-items: start;
         text-align: start;
         font-size: 12px;
-        margin: 0 1rem;
+        margin: 0.3rem 1rem;
     }
 
 .rating ul{
@@ -150,8 +150,8 @@ display: flex;
 }
 .promo-wrap{
     display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: end;
+        align-items: end;
         width: 100%;
 }
 .promo{
