@@ -7,8 +7,10 @@ import Gold from "../assets/gold.png";
 import plant from "../assets/plant.png";
 import leaf from "../assets/leaf.png";
 import "./Monstar.css";
+import Items from "./../Items";
 
-const Monster = () => {
+const Monster = ({ items, onClick }) => {
+  console.log(items);
   return (
     <div className="monster-wrapper">
       <div className="search-con">
@@ -32,146 +34,18 @@ const Monster = () => {
         </div>
       </div>
       <div className="plant-con">
-        <div className="plan1">
-          <div className="plant-holder">
-            <img src={Tree1} alt="" height={150} />
-            <div className="start-con">
-              <span className="tree-name">Monstar Vr</span>
-              <ul className="stars-c">
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiOutlineStar />
-                </li>
-                <li>(74)</li>
-              </ul>
-              <div className="tree-price">
-                <div className="pri">
-                  <span>price</span>
-                  <span className="price-am">$340</span>
-                </div>
-                <div className="cart-p">
-                  <span>Add to cart</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="plan1">
-          <div className="plant-holder">
-            <img src={Gold} alt="" height={150} />
-            <div className="start-con">
-              <span className="tree-name">Monstera Delicious</span>
-              <ul className="stars-c">
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiOutlineStar />
-                </li>
-                <li>(74)</li>
-              </ul>
-              <div className="tree-price">
-                <div className="pri">
-                  <span>price</span>
-                  <span className="price-am">$340</span>
-                </div>
-                <div className="cart-p">
-                  <span>Add to cart</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="plan1">
-          <div className="plant-holder">
-            <img src={leaf} alt="" height={120} />
-            <div className="start-con">
-              <span className="tree-name">Monstar green</span>
-              <ul className="stars-c">
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiOutlineStar />
-                </li>
-                <li>(74)</li>
-              </ul>
-              <div className="tree-price">
-                <div className="pri">
-                  <span>price</span>
-                  <span className="price-am">$340</span>
-                </div>
-                <div className="cart-p">
-                  <span>Add to cart</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="plan1">
-          <div className="plant-holder">
-            <img src={plant} alt="" height={120} />
-            <div className="start-con">
-              <span className="tree-name">Monstar tree</span>
-              <ul className="stars-c">
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiFillStar className="icon-start" />
-                </li>
-                <li>
-                  <AiOutlineStar />
-                </li>
-                <li>(74)</li>
-              </ul>
-              <div className="tree-price">
-                <div className="pri">
-                  <span>price</span>
-                  <span className="price-am">$340</span>
-                </div>
-                <div className="cart-p">
-                  <span>Add to cart</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {items.map(({ id, name, price, img }) => {
+          return (
+            <Items
+              id={id}
+              name={name}
+              price={price}
+              img={img}
+              key={id}
+              onClick={onClick}
+            />
+          );
+        })}
       </div>
     </div>
   );

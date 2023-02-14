@@ -6,6 +6,7 @@ import Part3 from "../assets/Group 19.png";
 import Part4 from "../assets/Group 18.png";
 import Part5 from "../assets/Group 17.png";
 import Heart from "../assets/love button.png";
+import { motion } from "framer-motion";
 // import { BsHeart } from "react-icons/bs";
 import "./AddToCart.css";
 
