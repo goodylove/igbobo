@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import SearchImg from "../assets/Group 8.png";
 import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
@@ -6,11 +6,14 @@ import Tree1 from "../assets/tree1.png";
 import Gold from "../assets/gold.png";
 import plant from "../assets/plant.png";
 import leaf from "../assets/leaf.png";
+import { ContextHolder } from "../ParenCom";
 import "./Monstar.css";
 import Items from "./../Items";
 
 const Monster = ({ items, onClick }) => {
-  console.log(items);
+  const item = useContext(ContextHolder);
+
+  console.log(item);
   return (
     <div className="monster-wrapper">
       <div className="search-con">
