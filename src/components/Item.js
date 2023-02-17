@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
+import { Context } from "./Context";
 // import "./centersection/Monster.css";
 
-const Items = ({ id, img, price, name, onClick }) => {
+const Item = ({ id, img, price, name, onClick }) => {
+  const item = useContext(Context);
+
   return (
     <div className="plan1" id={id}>
       <div className="plant-holder">
-        <img src={img} alt="" height={150} width={150} />
+        <img src={img} alt="" height={150} width={150} onClick={onClick} />
         <div className="start-con">
           <span className="tree-name">{name}</span>
           <ul className="stars-c">
@@ -34,8 +37,8 @@ const Items = ({ id, img, price, name, onClick }) => {
               <span className="price-am">${price}</span>
             </div>
             <div className="cart-p">
-              <button onClick={onClick} className="btn-item">
-                Add to cart
+              <button className="btn-item" onClick={onClick}>
+                View Item
               </button>
             </div>
           </div>
@@ -45,4 +48,4 @@ const Items = ({ id, img, price, name, onClick }) => {
   );
 };
 
-export default Items;
+export default Item;

@@ -48,7 +48,9 @@
         justify-content: center;
         align-items: center;
         padding-right: 1.6rem;
+        
 }
+
 .cart-con .list-cart li{
     padding: 0.4rem;
 }

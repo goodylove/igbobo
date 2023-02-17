@@ -6,14 +6,14 @@ import Tree1 from "../assets/tree1.png";
 import Gold from "../assets/gold.png";
 import plant from "../assets/plant.png";
 import leaf from "../assets/leaf.png";
-import { ContextHolder } from "../ParenCom";
 import "./Monstar.css";
-import Items from "./../Items";
+import Item from "./../Item";
+import { Context } from "../Context";
 
-const Monster = ({ items, onClick }) => {
-  const item = useContext(ContextHolder);
+const Monster = () => {
+  const { items, handleCurrentItemId } = useContext(Context);
 
-  console.log(item);
+  console.log(items);
   return (
     <div className="monster-wrapper">
       <div className="search-con">
@@ -39,13 +39,13 @@ const Monster = ({ items, onClick }) => {
       <div className="plant-con">
         {items.map(({ id, name, price, img }) => {
           return (
-            <Items
+            <Item
               id={id}
               name={name}
               price={price}
               img={img}
               key={id}
-              onClick={onClick}
+              onClick={() => handleCurrentItemId(id)}
             />
           );
         })}

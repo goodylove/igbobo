@@ -2,7 +2,7 @@
     border: 1px solid rgb(213, 209, 209);
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     height: auto;
     width: 330px;
 }
@@ -62,5 +62,32 @@
     border: none;
     border-radius: 20px;
    }
+.num{
+   background-color: #47A358;
+    color: #FFF;
+    height: 16px;
+    width: 16px;
+    border-radius: 50px;
+    position: absolute;
+    text-align: center;
+    top: 6px;
+    right: 170px;
 
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
 
+}
+
+.add-btn,.subtract-btn{
+    width: 39px;
+        padding: 4px;
+        border-radius: 3px;
+        border: none;
+        background-color:#47A358;
+        color: white;
+        font-size: 18px;
+        margin: 5px;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { Link } from "react-router-dom";
 import LogoNav from ".././assets/Logo (1).png";
@@ -6,8 +6,11 @@ import Cart from "../assets/heart.png";
 import Heart from "../assets/Group 2.png";
 import Pic from "../assets/Ellipse 1.png";
 import "./Nav.css";
+import { Context } from "../Context";
 
 const Nav = () => {
+  const { cartQuantityCount } = useContext(Context);
+  // console.log(items);
   return (
     <div className="nav">
       <div className="log-con">
@@ -39,6 +42,7 @@ const Nav = () => {
         <ul className="list-cart">
           <li>
             <img src={Cart} alt="" />
+            <div className="num">{cartQuantityCount}</div>
           </li>
           <li>
             <img src={Heart} alt="" />
