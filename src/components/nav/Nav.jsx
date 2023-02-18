@@ -7,10 +7,11 @@ import Heart from "../assets/Group 2.png";
 import Pic from "../assets/Ellipse 1.png";
 import "./Nav.css";
 import { Context } from "../Context";
+import { motion } from "framer-motion";
 
 const Nav = () => {
-  const { cartQuantityCount } = useContext(Context);
-  // console.log(items);
+  const { cartQuantityCount, animateItem } = useContext(Context);
+  console.log(animateItem);
   return (
     <div className="nav">
       <div className="log-con">
@@ -42,7 +43,9 @@ const Nav = () => {
         <ul className="list-cart">
           <li>
             <img src={Cart} alt="" />
-            <div className="num">{cartQuantityCount}</div>
+            <div className={animateItem ? "animate-num" : "num"}>
+              {cartQuantityCount}
+            </div>
           </li>
           <li>
             <img src={Heart} alt="" />

@@ -28,6 +28,7 @@ const ContextProvider = ({ children }) => {
     //   },
     // },
   ]);
+  const [animateItem, setAnimateItem] = useState(false);
 
   const handleCurrentItemId = (id) => {
     setCurrentItemId(id);
@@ -61,6 +62,8 @@ const ContextProvider = ({ children }) => {
 
         return newCart;
       });
+
+      setAnimateItem(true);
     },
     [cart.length]
   );
@@ -77,6 +80,9 @@ const ContextProvider = ({ children }) => {
       item.qty = qty;
 
       setCart(newCart);
+      if (item.qty === 0) {
+        setAnimateItem(false);
+      }
     },
     [cart]
   );
@@ -101,6 +107,7 @@ const ContextProvider = ({ children }) => {
       handleFindProductItemInCart,
       handleItemQtyChange,
       handleRemoveItemFromCart,
+      animateItem,
     }),
     [currentItemId, cart]
   );

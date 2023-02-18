@@ -20,6 +20,7 @@ const AddToCart = () => {
     handleFindProductItemInCart,
     handleItemQtyChange,
     handleRemoveItemFromCart,
+    animateItem,
   } = useContext(Context);
 
   const currentItem = useMemo(
