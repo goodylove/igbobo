@@ -7,7 +7,7 @@ import AddToCart from "./addToCart/AddToCart";
 export const Context = createContext();
 
 const ContextProvider = ({ children }) => {
-  const [currentItemId, setCurrentItemId] = useState(null);
+  const [currentItemId, setCurrentItemId] = useState({});
   const [cart, setCart] = useState([
     // {
     //   id: 1,
@@ -29,6 +29,12 @@ const ContextProvider = ({ children }) => {
     // },
   ]);
   const [animateItem, setAnimateItem] = useState(false);
+  const [animateHeart, setAnimateHeart] = useState(false);
+  const [checkItem, setCheckItem] = useState();
+
+  const handleChange = (e) => {
+    setCheckItem(e.target.id);
+  };
 
   const handleCurrentItemId = (id) => {
     setCurrentItemId(id);
@@ -64,6 +70,7 @@ const ContextProvider = ({ children }) => {
       });
 
       setAnimateItem(true);
+      setAnimateHeart(true);
     },
     [cart.length]
   );
@@ -87,15 +94,6 @@ const ContextProvider = ({ children }) => {
     [cart]
   );
 
-  // const onAddToCart = (itemId, quanity) => {
-  //   const getAnItem = itemsCon.filter((item) => item === itemId);
-  //   console.log(getAnItem);
-  //   setCartNum(quanity);
-  //   return getAnItem;
-  // };
-  // const handleAddItemToCart = () => {
-  //   onAddToCart(currentItemId, 1);
-  // };
   const contextValue = useMemo(
     () => ({
       items: itemsCon,
@@ -108,8 +106,11 @@ const ContextProvider = ({ children }) => {
       handleItemQtyChange,
       handleRemoveItemFromCart,
       animateItem,
+      animateHeart,
+      handleChange,
+      checkItem,
     }),
-    [currentItemId, cart]
+    [currentItemId, cart, animateHeart, animateItem, animateHeart, checkItem]
   );
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;

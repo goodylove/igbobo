@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Categories.css";
 import { AiOutlineStar } from "react-icons/ai";
 import { AiFillStar } from "react-icons/ai";
+import { Context } from "../Context";
 const Categoriesection = () => {
+  const { handleChange, checkItem } = useContext(Context);
   return (
     <div className="general-wrapper">
       <div className="filter">
@@ -18,27 +20,27 @@ const Categoriesection = () => {
                 <span>Gardening</span>
               </li>
               <li>
-                <input type="checkbox" checked />
+                <input type="checkbox" id="plant" onChange={handleChange} />
 
                 <span>plants</span>
               </li>
               <li>
-                <input type="checkbox" />
+                <input type="checkbox" id="room" onChange={handleChange} />
 
-                <span>seeds</span>
+                <span>rooms</span>
               </li>
               <li>
-                <input type="checkbox" />
+                <input type="checkbox" onChange={handleChange} />
 
                 <span>bulb</span>
               </li>
               <li>
-                <input type="checkbox" />
+                <input type="checkbox" onChange={handleChange} />
 
                 <span>planters</span>
               </li>
               <li>
-                <input type="checkbox" />
+                <input type="checkbox" onChange={handleChange} />
 
                 <span>Others</span>
               </li>

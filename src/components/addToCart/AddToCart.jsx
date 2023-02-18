@@ -1,16 +1,9 @@
 import React, { useCallback, useContext, useMemo } from "react";
-// import Part1 from "../assets/Group 21.png";
-// import Part2 from "../assets/Group 20.png";
-// import Part3 from "../assets/Group 19.png";
-// import Part4 from "../assets/Group 18.png";
-// import Part5 from "../assets/Group 17.png";
+
 import Heart from "../assets/love button.png";
 
 import { Context } from "../Context";
-import { motion } from "framer-motion";
-// import { BsHeart } from "react-icons/bs";
 import "./AddToCart.css";
-// let getAnItem = [];
 
 const AddToCart = () => {
   const {
@@ -20,13 +13,30 @@ const AddToCart = () => {
     handleFindProductItemInCart,
     handleItemQtyChange,
     handleRemoveItemFromCart,
-    animateItem,
+    animateHeart,
   } = useContext(Context);
 
+  let plantItemsCon = items[0].plantItems;
+  let plantContent = plantItemsCon.map(
+    ({ img, name, id, price, images, description }) => {
+      return {
+        img: img,
+        name: name,
+        id: id,
+        price: price,
+        image: images,
+        description: description,
+      };
+    }
+  );
+  // console.log(plantContent);
+
   const currentItem = useMemo(
-    () => items.find((item) => item.id === currentItemId) || items[0],
+    () =>
+      plantContent.find((item) => item.id === currentItemId) || plantContent[0],
     [currentItemId]
   );
+  console.log(currentItem);
 
   const itemInCart = handleFindProductItemInCart(currentItem.id);
 
@@ -37,11 +47,7 @@ const AddToCart = () => {
     }
     handleItemQtyChange(itemInCart.id, itemInCart.qty - 1);
   };
-  // const handleAddItemToCart = () => {
-  //   getAnItem.push(currentItem);
-  //   console.log(currentItem);
-  // };
-  // console.log(getAnItem);
+
   return (
     <div className="addtocart">
       <div className="second-wrapper">
@@ -53,11 +59,11 @@ const AddToCart = () => {
               className="main-tree"
             />
             <div className="thumbnail">
-              {currentItem.images.map((image, index) => (
+              {currentItem.image.map((image, index) => (
                 <img
                   key={index}
                   src={image}
-                  alt={`${currentItem.name}-image-${index + 1}`}
+                  alt={currentItem.name}
                   className="img-item"
                 />
               ))}
@@ -73,7 +79,11 @@ const AddToCart = () => {
           </div>
         </div>
         <div className="addCart-btn">
-          <img src={Heart} alt="" className="love-h" />
+          <img
+            src={Heart}
+            alt=""
+            className={animateHeart ? "love-animate" : "love - h"}
+          />
 
           {itemInCart ? (
             <div>
@@ -106,7 +116,6 @@ const AddToCart = () => {
               }
             >
               ${currentItem.price}-Add To Cart
-              {/* <div className="num">{getAnItem.length}</div> */}
             </button>
           )}
         </div>

@@ -50,8 +50,17 @@
 }
 
 .love-h {
-  width: 40px;
-  height: 40px;
+  width:30px;
+  height: 30px;
+  transition: 0.3s;
+  transform: translateX(0);
+}
+.love-animate{
+ 
+  transition: 0.3s;
+  transform: translateX(80px);
+  opacity: 0;
+  
 }
 .btn-add {
   background-color: #47a358;

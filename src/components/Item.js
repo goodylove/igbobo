@@ -5,12 +5,12 @@ import { Context } from "./Context";
 // import "./centersection/Monster.css";
 
 const Item = ({ id, img, price, name, onClick }) => {
-  const item = useContext(Context);
+  // const items = useContext(Context);
 
   return (
     <div className="plan1" id={id}>
       <div className="plant-holder">
-        <img src={img} alt="" height={150} width={150} onClick={onClick} />
+        <img src={img} alt="" height={150} width={150} />
         <div className="start-con">
           <span className="tree-name">{name}</span>
           <ul className="stars-c">

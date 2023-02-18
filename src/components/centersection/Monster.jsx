@@ -1,19 +1,45 @@
 import React, { useContext } from "react";
 import SearchImg from "../assets/Group 8.png";
-import { AiFillStar } from "react-icons/ai";
-import { AiOutlineStar } from "react-icons/ai";
-import Tree1 from "../assets/tree1.png";
-import Gold from "../assets/gold.png";
-import plant from "../assets/plant.png";
-import leaf from "../assets/leaf.png";
+
 import "./Monstar.css";
 import Item from "./../Item";
 import { Context } from "../Context";
 
 const Monster = () => {
-  const { items, handleCurrentItemId } = useContext(Context);
+  const { items, handleCurrentItemId, checkItem } = useContext(Context);
 
-  console.log(items);
+  const formateItem = () => {
+    const newItem = items.map((item) => {
+      let id = item.id;
+      let plantItem = item.plantItems.map(
+        ({ img, name, id, price, images, description }) => {
+          return {
+            img,
+            name,
+            id,
+            price,
+            images,
+            description,
+          };
+        }
+      );
+      const plantsContent = [id, plantItem];
+      return plantsContent;
+    });
+    return newItem;
+  };
+  const allItems = formateItem();
+  const itemItem = allItems.find((item) => {
+    if (item[0] === checkItem) {
+      let returnValue = item[1];
+      return returnValue;
+    }
+    return;
+  });
+  console.log(itemItem);
+
+  let plantItemsCon = items[0].plantItems;
+
   return (
     <div className="monster-wrapper">
       <div className="search-con">
@@ -37,7 +63,7 @@ const Monster = () => {
         </div>
       </div>
       <div className="plant-con">
-        {items.map(({ id, name, price, img }) => {
+        {plantItemsCon.map(({ id, name, price, img }) => {
           return (
             <Item
               id={id}
