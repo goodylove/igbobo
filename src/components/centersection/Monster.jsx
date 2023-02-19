@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import SearchImg from "../assets/Group 8.png";
 
 import "./Monstar.css";
@@ -7,6 +7,7 @@ import { Context } from "../Context";
 
 const Monster = () => {
   const { items, handleCurrentItemId, checkItem } = useContext(Context);
+  const [getValue, setGetValue] = useState(items[0].plantItems);
 
   const formateItem = () => {
     const newItem = items.map((item) => {
@@ -28,17 +29,19 @@ const Monster = () => {
     });
     return newItem;
   };
-  const allItems = formateItem();
-  const itemItem = allItems.find((item) => {
-    if (item[0] === checkItem) {
-      let returnValue = item[1];
-      return returnValue;
-    }
-    return;
-  });
-  console.log(itemItem);
 
-  let plantItemsCon = items[0].plantItems;
+  useEffect(() => {
+    const allItems = formateItem();
+    allItems.find((item) => {
+      if (item[0] === checkItem) {
+        setGetValue(item[1]);
+      }
+    });
+  }, [checkItem]);
+  console.log(getValue);
+
+  // let plantItemsCon = items[0].plantItems;
+  // console.log(plantItemsCon);
 
   return (
     <div className="monster-wrapper">
@@ -63,7 +66,8 @@ const Monster = () => {
         </div>
       </div>
       <div className="plant-con">
-        {plantItemsCon.map(({ id, name, price, img }) => {
+        ;
+        {getValue.map(({ id, name, price, img }) => {
           return (
             <Item
               id={id}

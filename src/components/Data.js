@@ -65,7 +65,7 @@ export const itemsCon = [
           "street art edison bulb glutem-free tofu try-hard lumbersexual brooklyn tattooed pickled chambray Actually humlebran next leve",
         id: 1,
         price: 1290,
-        name: "Monster vr",
+        name: "dulux room",
       },
       {
         img: room2,
@@ -74,7 +74,7 @@ export const itemsCon = [
           "street art edison bulb glutem-free tofu try-hard lumbersexual brooklyn tattooed pickled chambray Actually humlebran next leve",
         id: 2,
         price: 300,
-        name: "Monster Delicious",
+        name: "single room",
       },
       {
         img: room3,
@@ -83,7 +83,7 @@ export const itemsCon = [
           "street art edison bulb glutem-free tofu try-hard lumbersexual brooklyn tattooed pickled chambray Actually humlebran next leve",
         id: 3,
         price: 290,
-        name: "Monster tree",
+        name: "visitor room",
       },
       {
         img: room4,
@@ -92,7 +92,7 @@ export const itemsCon = [
           "street art edison bulb glutem-free tofu try-hard lumbersexual brooklyn tattooed pickled chambray Actually humlebran next leve",
         id: 4,
         price: 390,
-        name: "Monster vr",
+        name: "presidential room",
       },
     ],
   },
