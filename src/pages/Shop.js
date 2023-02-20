@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import Categoriesection from "./../components/categoriesection/CategorieSection";
 import Monster from "./../components/centersection/Monster";
 import AddToCart from "./../components/addToCart/AddToCart";
 
-import "./Shop.css";
 import CheckOut from "./../components/checkout/CheckOut";
 import SinglePlant from "./../components/SinglePlant";
+import { Context } from "../components/Context";
+import CartItems from "../components/CartItems";
+
+import "./Shop.css";
 
 const Shop = () => {
+  const { isCartClicked } = useContext(Context);
   return (
     <div className="shop">
       <div className="wrapper">
@@ -19,7 +23,9 @@ const Shop = () => {
           {/* <CheckOut /> */}
         </div>
         <AddToCart />
+        {/* <AddToCart /> */}
         {/* <SinglePlant /> */}
+        {/* <CartItems /> */}
       </div>
     </div>
   );

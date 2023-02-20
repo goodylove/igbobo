@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 // import ParentComponets from "./components/ParentComponents"
 import ContextProvider from "./components/Context";
 import Shop from "./pages/Shop";
+import CartPage from "./pages/CartPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Shop />} />
+          <Route path="/cartpage" element={<CartPage />} />
         </Routes>
       </ContextProvider>
       {/* <ParentComponets /> */}

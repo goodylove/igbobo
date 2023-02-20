@@ -4,6 +4,7 @@ import React, {
   useMemo,
   useCallback,
   useEffect,
+  useRef,
 } from "react";
 
 import { itemsCon } from "./Data";
@@ -37,7 +38,8 @@ const ContextProvider = ({ children }) => {
   const [checkItem, setCheckItem] = useState();
   const [getValue, setGetValue] = useState(itemsCon[0].plantItems);
   const [isChecked, setIsChecked] = useState(false);
-
+  const [isCartClicked, setIsCartClicked] = useState(false);
+  const idRef = useRef(null);
   const handleChange = (e) => {
     setIsChecked(e.target.checked);
 
@@ -134,11 +136,19 @@ const ContextProvider = ({ children }) => {
   }, [checkItem]);
   console.log(getValue);
 
+  const handleCartItemOnClick = (e) => {
+    setIsCartClicked(true);
+  };
+
   const contextValue = useMemo(
     () => ({
+      idRef,
+
       items: itemsCon,
       handleCurrentItemId,
       currentItemId,
+      handleCartItemOnClick,
+      isCartClicked,
       cart,
       cartQuantityCount,
       handleAddItemToCart,

@@ -89,12 +89,13 @@ width: 340px;}
   justify-content: center;
   align-items: center;
   font-size: 13px;
+  border: none;
 }
 .animate-num {
   opacity: 1;
   top: 0;
   transform: translateY(-33rem);
-
+border: none;
   background-color: #47a358;
   color: #fff;
   height: 16px;

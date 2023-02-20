@@ -7,11 +7,15 @@ import Heart from "../assets/Group 2.png";
 import Pic from "../assets/Ellipse 1.png";
 import "./Nav.css";
 import { Context } from "../Context";
-import { motion } from "framer-motion";
 
 const Nav = () => {
-  const { cartQuantityCount, animateItem } = useContext(Context);
-  console.log(animateItem);
+  const {
+    cartQuantityCount,
+    animateItem,
+    isCartClicked,
+    handleCartItemOnClick,
+    idRef,
+  } = useContext(Context);
   return (
     <div className="nav">
       <div className="log-con">
@@ -43,9 +47,17 @@ const Nav = () => {
         <ul className="list-cart">
           <li>
             <img src={Cart} alt="" />
-            <div className={animateItem ? "animate-num" : "num"}>
-              {cartQuantityCount}
-            </div>
+            <Link to="/cartpage">
+              <button
+                ref={idRef}
+                id="cart"
+                value={cartQuantityCount}
+                className={animateItem ? "animate-num" : "num"}
+                onClick={handleCartItemOnClick}
+              >
+                {cartQuantityCount}
+              </button>
+            </Link>
           </li>
           <li>
             <img src={Heart} alt="" />
