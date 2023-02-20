@@ -15,11 +15,11 @@ const Shop = () => {
           <Categoriesection />
         </div>
         <div className="mon">
-          {/* <Monster /> */}
-          <CheckOut />
+          <Monster />
+          {/* <CheckOut /> */}
         </div>
-        {/* <AddToCart /> */}
-        <SinglePlant />
+        <AddToCart />
+        {/* <SinglePlant /> */}
       </div>
     </div>
   );

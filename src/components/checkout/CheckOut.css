@@ -1,9 +1,14 @@
 .card-container{
     display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
 }
-.checkout-container{
-    height: 85%;
+/* .checkout-container{
+   
 
+} */
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
