@@ -4,7 +4,7 @@ import { AiOutlineStar } from "react-icons/ai";
 import { AiFillStar } from "react-icons/ai";
 import { Context } from "../Context";
 const Categoriesection = () => {
-  const { handleChange, checkItem } = useContext(Context);
+  const { handleChange, isChecked } = useContext(Context);
   return (
     <div className="general-wrapper">
       <div className="filter">
@@ -16,31 +16,58 @@ const Categoriesection = () => {
           <div className="wrap-list">
             <ul>
               <li>
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  id="lant"
+                  onChange={handleChange}
+                  checked={isChecked}
+                />
                 <span>Gardening</span>
               </li>
               <li>
-                <input type="checkbox" id="plant" onChange={handleChange} />
+                <input
+                  type="checkbox"
+                  id="plant"
+                  onChange={handleChange}
+                  checked={isChecked}
+                />
 
                 <span>plants</span>
               </li>
               <li>
-                <input type="checkbox" id="room" onChange={handleChange} />
+                <input
+                  type="checkbox"
+                  id="room"
+                  onChange={handleChange}
+                  checked={isChecked}
+                />
 
                 <span>rooms</span>
               </li>
               <li>
-                <input type="checkbox" onChange={handleChange} />
+                <input
+                  type="checkbox"
+                  onChange={handleChange}
+                  checked={isChecked}
+                />
 
                 <span>bulb</span>
               </li>
               <li>
-                <input type="checkbox" onChange={handleChange} />
+                <input
+                  type="checkbox"
+                  onChange={handleChange}
+                  checked={isChecked}
+                />
 
                 <span>planters</span>
               </li>
               <li>
-                <input type="checkbox" onChange={handleChange} />
+                <input
+                  type="checkbox"
+                  onChange={handleChange}
+                  checked={isChecked}
+                />
 
                 <span>Others</span>
               </li>

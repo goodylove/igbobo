@@ -1,12 +1,11 @@
-import React, { useState, createContext } from "react";
+import React from "react";
 import Categoriesection from "./../components/categoriesection/CategorieSection";
 import Monster from "./../components/centersection/Monster";
 import AddToCart from "./../components/addToCart/AddToCart";
-import { motion } from "framer-motion";
-import { itemsCon } from "../components/Data";
+
 import "./Shop.css";
-import ContextProvider from "../components/Context";
-// import ContextProvider from "../components/Context";
+import CheckOut from "./../components/checkout/CheckOut";
+import SinglePlant from "./../components/SinglePlant";
 
 const Shop = () => {
   return (
@@ -16,12 +15,13 @@ const Shop = () => {
           <Categoriesection />
         </div>
         <div className="mon">
-          <Monster />
+          {/* <Monster /> */}
+          <CheckOut />
         </div>
-        <AddToCart />
+        {/* <AddToCart /> */}
+        <SinglePlant />
       </div>
     </div>
-    // <ParentCom />
   );
 };
 

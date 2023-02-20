@@ -6,42 +6,39 @@ import Item from "./../Item";
 import { Context } from "../Context";
 
 const Monster = () => {
-  const { items, handleCurrentItemId, checkItem } = useContext(Context);
-  const [getValue, setGetValue] = useState(items[0].plantItems);
+  const { items, handleCurrentItemId, getValue } = useContext(Context);
+  // const [getValue, setGetValue] = useState(items[0].plantItems);
 
-  const formateItem = () => {
-    const newItem = items.map((item) => {
-      let id = item.id;
-      let plantItem = item.plantItems.map(
-        ({ img, name, id, price, images, description }) => {
-          return {
-            img,
-            name,
-            id,
-            price,
-            images,
-            description,
-          };
-        }
-      );
-      const plantsContent = [id, plantItem];
-      return plantsContent;
-    });
-    return newItem;
-  };
+  // const formateItem = () => {
+  //   const newItem = items.map((item) => {
+  //     let id = item.id;
+  //     let plantItem = item.plantItems.map(
+  //       ({ img, name, id, price, images, description }) => {
+  //         return {
+  //           img,
+  //           name,
+  //           id,
+  //           price,
+  //           images,
+  //           description,
+  //         };
+  //       }
+  //     );
+  //     const plantsContent = [id, plantItem];
+  //     return plantsContent;
+  //   });
+  //   return newItem;
+  // };
 
-  useEffect(() => {
-    const allItems = formateItem();
-    allItems.find((item) => {
-      if (item[0] === checkItem) {
-        setGetValue(item[1]);
-      }
-    });
-  }, [checkItem]);
-  console.log(getValue);
-
-  // let plantItemsCon = items[0].plantItems;
-  // console.log(plantItemsCon);
+  // useEffect(() => {
+  //   const allItems = formateItem();
+  //   allItems.find((item) => {
+  //     if (item[0] === checkItem) {
+  //       setGetValue(item[1]);
+  //     }
+  //   });
+  // }, [checkItem]);
+  // console.log(getValue);
 
   return (
     <div className="monster-wrapper">
@@ -66,7 +63,6 @@ const Monster = () => {
         </div>
       </div>
       <div className="plant-con">
-        ;
         {getValue.map(({ id, name, price, img }) => {
           return (
             <Item

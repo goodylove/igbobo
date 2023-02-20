@@ -1,8 +1,12 @@
-import React, { useState, createContext, useMemo, useCallback } from "react";
-import Categoriesection from "./categoriesection/CategorieSection";
+import React, {
+  useState,
+  createContext,
+  useMemo,
+  useCallback,
+  useEffect,
+} from "react";
+
 import { itemsCon } from "./Data";
-import Monster from "./centersection/Monster";
-import AddToCart from "./addToCart/AddToCart";
 
 export const Context = createContext();
 
@@ -31,12 +35,17 @@ const ContextProvider = ({ children }) => {
   const [animateItem, setAnimateItem] = useState(false);
   const [animateHeart, setAnimateHeart] = useState(false);
   const [checkItem, setCheckItem] = useState();
+  const [getValue, setGetValue] = useState(itemsCon[0].plantItems);
+  const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = (e) => {
+    setIsChecked(e.target.checked);
+
     setCheckItem(e.target.id);
   };
 
   const handleCurrentItemId = (id) => {
+    console.log(id);
     setCurrentItemId(id);
   };
 
@@ -94,6 +103,37 @@ const ContextProvider = ({ children }) => {
     [cart]
   );
 
+  const formateItem = () => {
+    const newItem = itemsCon.map((item) => {
+      let id = item.id;
+      let plantItem = item.plantItems.map(
+        ({ img, name, id, price, images, description }) => {
+          return {
+            img,
+            name,
+            id,
+            price,
+            images,
+            description,
+          };
+        }
+      );
+      const plantsContent = [id, plantItem];
+      return plantsContent;
+    });
+    return newItem;
+  };
+
+  useEffect(() => {
+    const allItems = formateItem();
+    allItems.find((item) => {
+      if (item[0] === checkItem) {
+        setGetValue(item[1]);
+      }
+    });
+  }, [checkItem]);
+  console.log(getValue);
+
   const contextValue = useMemo(
     () => ({
       items: itemsCon,
@@ -109,8 +149,18 @@ const ContextProvider = ({ children }) => {
       animateHeart,
       handleChange,
       checkItem,
+      getValue,
     }),
-    [currentItemId, cart, animateHeart, animateItem, animateHeart, checkItem]
+    [
+      currentItemId,
+      cart,
+      animateHeart,
+      animateItem,
+      animateHeart,
+      checkItem,
+      getValue,
+      isChecked,
+    ]
   );
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;

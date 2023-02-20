@@ -14,10 +14,12 @@ const AddToCart = () => {
     handleItemQtyChange,
     handleRemoveItemFromCart,
     animateHeart,
+    checkItem,
+    getValue,
   } = useContext(Context);
 
-  let plantItemsCon = items[0].plantItems;
-  let plantContent = plantItemsCon.map(
+  // let plantItemsCon = items[0].plantItems;
+  let plantContent = getValue.map(
     ({ img, name, id, price, images, description }) => {
       return {
         img: img,

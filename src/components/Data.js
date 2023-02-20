@@ -63,7 +63,7 @@ export const itemsCon = [
         images: [room1, room1, room1, room1, room1],
         description:
           "street art edison bulb glutem-free tofu try-hard lumbersexual brooklyn tattooed pickled chambray Actually humlebran next leve",
-        id: 1,
+        id: 5,
         price: 1290,
         name: "dulux room",
       },
@@ -72,8 +72,8 @@ export const itemsCon = [
         images: [room2, room2, room2, room2, room2],
         description:
           "street art edison bulb glutem-free tofu try-hard lumbersexual brooklyn tattooed pickled chambray Actually humlebran next leve",
-        id: 2,
-        price: 300,
+        id: 6,
+        price: 3000,
         name: "single room",
       },
       {
@@ -81,8 +81,8 @@ export const itemsCon = [
         images: [room3, room3, room3, room3, room3],
         description:
           "street art edison bulb glutem-free tofu try-hard lumbersexual brooklyn tattooed pickled chambray Actually humlebran next leve",
-        id: 3,
-        price: 290,
+        id: 7,
+        price: 2290,
         name: "visitor room",
       },
       {
@@ -90,8 +90,8 @@ export const itemsCon = [
         images: [room4, room4, room4, room4, room4],
         description:
           "street art edison bulb glutem-free tofu try-hard lumbersexual brooklyn tattooed pickled chambray Actually humlebran next leve",
-        id: 4,
-        price: 390,
+        id: 8,
+        price: 3390,
         name: "presidential room",
       },
     ],
