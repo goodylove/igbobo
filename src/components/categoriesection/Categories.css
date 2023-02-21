@@ -54,6 +54,9 @@ input[type="checkbox"]{
     .wrap-list ul li{
         padding: 0.3rem;
     }
+         .wrap-list ul li span{
+            padding: 0 10px;
+         }
     .price-range{
         border: 1px solid rgb(209, 206, 206);
         width: 200px;

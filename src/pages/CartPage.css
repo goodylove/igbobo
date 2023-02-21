@@ -1,4 +1,21 @@
   .cart-page{
 margin-top: 4rem;
+width: 100%;
   }
+  .close-icon{
+    display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 28px;
+        
+        padding: 20px;
+    }
+  
+  .cartpage-con-product{
+display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+}
   

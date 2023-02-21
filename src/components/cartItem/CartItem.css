@@ -1,0 +1,12 @@
+.details-item{
+    display: flex;
+
+        text-align: start;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 20px;
+        font-weight: 500;
+}
+.remove-item{
+    color:green;
+}

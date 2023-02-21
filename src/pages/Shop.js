@@ -6,12 +6,10 @@ import AddToCart from "./../components/addToCart/AddToCart";
 import CheckOut from "./../components/checkout/CheckOut";
 import SinglePlant from "./../components/SinglePlant";
 import { Context } from "../components/Context";
-import CartItems from "../components/CartItems";
 
 import "./Shop.css";
 
 const Shop = () => {
-  const { isCartClicked } = useContext(Context);
   return (
     <div className="shop">
       <div className="wrapper">
