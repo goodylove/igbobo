@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import SearchImg from "../assets/Group 8.png";
 
 import "./Monstar.css";
@@ -6,39 +6,7 @@ import Item from "./../Item";
 import { Context } from "../Context";
 
 const Monster = () => {
-  const { items, handleCurrentItemId, getValue } = useContext(Context);
-  // const [getValue, setGetValue] = useState(items[0].plantItems);
-
-  // const formateItem = () => {
-  //   const newItem = items.map((item) => {
-  //     let id = item.id;
-  //     let plantItem = item.plantItems.map(
-  //       ({ img, name, id, price, images, description }) => {
-  //         return {
-  //           img,
-  //           name,
-  //           id,
-  //           price,
-  //           images,
-  //           description,
-  //         };
-  //       }
-  //     );
-  //     const plantsContent = [id, plantItem];
-  //     return plantsContent;
-  //   });
-  //   return newItem;
-  // };
-
-  // useEffect(() => {
-  //   const allItems = formateItem();
-  //   allItems.find((item) => {
-  //     if (item[0] === checkItem) {
-  //       setGetValue(item[1]);
-  //     }
-  //   });
-  // }, [checkItem]);
-  // console.log(getValue);
+  const { handleCurrentItemId, getValue } = useContext(Context);
 
   return (
     <div className="monster-wrapper">

@@ -1,75 +1,71 @@
 import React, { useContext, useMemo } from "react";
 
 import { Context } from "./Context";
-const CartItems = () => {
-  const {
-    items,
-    currentItemId,
-    handleAddItemToCart,
-    handleFindProductItemInCart,
-    handleItemQtyChange,
-    handleRemoveItemFromCart,
-    animateHeart,
-    checkItem,
-    getValue,
-  } = useContext(Context);
+const CartItems = ({ qty, product }) => {
+  //   const {
+  //     items,
+  //     currentItemId,
+  //     handleAddItemToCart,
+  //     handleFindProductItemInCart,
+  //     handleItemQtyChange,
+  //     handleRemoveItemFromCart,
+  //     animateHeart,
+  //     checkItem,
+  //     getValue,
+  //   } = useContext(Context);
 
-  // let plantItemsCon = items[0].plantItems;
-  let plantContent = getValue.map(
-    ({ img, name, id, price, images, description }) => {
-      return {
-        img: img,
-        name: name,
-        id: id,
-        price: price,
-        image: images,
-        description: description,
-      };
-    }
-  );
-  // console.log(plantContent);
+  //   // let plantItemsCon = items[0].plantItems;
+  //   let plantContent = getValue.map(
+  //     ({ img, name, id, price, images, description }) => {
+  //       return {
+  //         img: img,
+  //         name: name,
+  //         id: id,
+  //         price: price,
+  //         image: images,
+  //         description: description,
+  //       };
+  //     }
+  //   );
+  //   // console.log(plantContent);
 
-  const currentItem = useMemo(
-    () =>
-      plantContent.find((item) => item.id === currentItemId) || plantContent[0],
-    [currentItemId]
-  );
-  console.log(currentItem);
+  //   const currentItem = useMemo(
+  //     () =>
+  //       plantContent.find((item) => item.id === currentItemId) || plantContent[0],
+  //     [currentItemId]
+  //   );
+  //   console.log(currentItem);
 
-  const itemInCart = handleFindProductItemInCart(currentItem.id);
+  //   const itemInCart = handleFindProductItemInCart(currentItem.id);
 
-  const handleDecreaseQty = () => {
-    if (itemInCart.qty <= 1) {
-      handleRemoveItemFromCart(itemInCart.id);
-      return;
-    }
-    handleItemQtyChange(itemInCart.id, itemInCart.qty - 1);
-  };
+  //   const handleDecreaseQty = () => {
+  //     if (itemInCart.qty <= 1) {
+  //       handleRemoveItemFromCart(itemInCart.id);
+  //       return;
+  //     }
+  //     handleItemQtyChange(itemInCart.id, itemInCart.qty - 1);
+  //   };
 
   return (
     <div className="addtocart">
       <div className="second-wrapper">
         <div className="addCart-item">
           <div className="tree-items">
-            <img
-              src={currentItem.img}
-              alt={currentItem.name}
-              className="main-tree"
-            />
-            <div className="thumbnail">
-              {currentItem.image.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt={currentItem.name}
-                  className="img-item"
-                />
-              ))}
-            </div>
+            <img src={product.img} alt={product.name} className="main-tree" />
+            {/* <div className="thumbnail">
+              {product.image.map((image, index) => (
+               <img
+                key={index}
+                src={image}
+                alt={product.name}
+                className="img-item"
+              />
+              ))}{" "}
+            </div> */}
           </div>
           <div className="details">
-            <p className="name-tr">{currentItem.name}</p>
-            <p>{currentItem.description}</p>
+            <p className="name-tr">{product.name}</p>
+            <p>{product.description}</p>
             <div className="detail-reviews">
               <span style={{ color: "green" }}>Details</span>
               <span>Reviews</span>
@@ -103,7 +99,8 @@ const CartItems = () => {
                 handleAddItemToCart(
                   currentItem.id,
                   currentItem.price,
-                  currentItem.name
+                  currentItem.name,
+                  currentItem.img
                 )
               }
             >

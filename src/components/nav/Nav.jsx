@@ -13,7 +13,7 @@ const Nav = () => {
     cartQuantityCount,
     animateItem,
     isCartClicked,
-    handleCartItemOnClick,
+
     idRef,
   } = useContext(Context);
   return (
@@ -53,7 +53,6 @@ const Nav = () => {
                 id="cart"
                 value={cartQuantityCount}
                 className={animateItem ? "animate-num" : "num"}
-                onClick={handleCartItemOnClick}
               >
                 {cartQuantityCount}
               </button>

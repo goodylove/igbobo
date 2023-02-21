@@ -21,6 +21,7 @@ const ContextProvider = ({ children }) => {
     //     id: 2,
     //     price: 20,
     //     name: "Monster VR",
+    //     img: Tree1,
     //   },
     // },
     // {
@@ -30,6 +31,7 @@ const ContextProvider = ({ children }) => {
     //     id: 3,
     //     price: 400,
     //     name: "Monster goeo",
+    //     img: Tree1,
     //   },
     // },
   ]);
@@ -62,7 +64,7 @@ const ContextProvider = ({ children }) => {
   }, []);
 
   const handleAddItemToCart = useCallback(
-    (producId, productPrice, productName) => {
+    (producId, productPrice, productName, productImg) => {
       const item = {
         id: cart.length,
         qty: 1,
@@ -70,6 +72,7 @@ const ContextProvider = ({ children }) => {
           id: producId,
           price: productPrice,
           name: productName,
+          img: productImg,
         },
       };
 
@@ -136,10 +139,6 @@ const ContextProvider = ({ children }) => {
   }, [checkItem]);
   console.log(getValue);
 
-  const handleCartItemOnClick = (e) => {
-    setIsCartClicked(true);
-  };
-
   const contextValue = useMemo(
     () => ({
       idRef,
@@ -147,7 +146,7 @@ const ContextProvider = ({ children }) => {
       items: itemsCon,
       handleCurrentItemId,
       currentItemId,
-      handleCartItemOnClick,
+
       isCartClicked,
       cart,
       cartQuantityCount,

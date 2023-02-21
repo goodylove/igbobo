@@ -17,8 +17,9 @@ const Categoriesection = () => {
             <ul>
               <li>
                 <input
-                  type="checkbox"
+                  type="radio"
                   id="lant"
+                  name="group1"
                   onChange={handleChange}
                   checked={isChecked}
                 />
@@ -26,7 +27,9 @@ const Categoriesection = () => {
               </li>
               <li>
                 <input
-                  type="checkbox"
+                  type="radio"
+                  value="plant"
+                  name="group1"
                   id="plant"
                   onChange={handleChange}
                   checked={isChecked}
@@ -36,7 +39,9 @@ const Categoriesection = () => {
               </li>
               <li>
                 <input
-                  type="checkbox"
+                  type="radio"
+                  value="room"
+                  name="group1"
                   id="room"
                   onChange={handleChange}
                   checked={isChecked}
@@ -46,7 +51,8 @@ const Categoriesection = () => {
               </li>
               <li>
                 <input
-                  type="checkbox"
+                  name="group1"
+                  type="radio"
                   onChange={handleChange}
                   checked={isChecked}
                 />
@@ -55,7 +61,8 @@ const Categoriesection = () => {
               </li>
               <li>
                 <input
-                  type="checkbox"
+                  name="group1"
+                  type="radio"
                   onChange={handleChange}
                   checked={isChecked}
                 />
@@ -64,7 +71,8 @@ const Categoriesection = () => {
               </li>
               <li>
                 <input
-                  type="checkbox"
+                  name="group1"
+                  type="radio"
                   onChange={handleChange}
                   checked={isChecked}
                 />

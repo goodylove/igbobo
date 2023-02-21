@@ -113,7 +113,8 @@ const AddToCart = () => {
                 handleAddItemToCart(
                   currentItem.id,
                   currentItem.price,
-                  currentItem.name
+                  currentItem.name,
+                  currentItem.img
                 )
               }
             >
