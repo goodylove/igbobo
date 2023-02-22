@@ -49,7 +49,6 @@ const ContextProvider = ({ children }) => {
   };
 
   const handleCurrentItemId = (id) => {
-    console.log(id);
     setCurrentItemId(id);
   };
 
@@ -137,7 +136,6 @@ const ContextProvider = ({ children }) => {
       }
     });
   }, [checkItem]);
-  console.log(getValue);
 
   const contextValue = useMemo(
     () => ({

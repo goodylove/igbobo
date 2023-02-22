@@ -31,14 +31,13 @@ const AddToCart = () => {
       };
     }
   );
-  // console.log(plantContent);
+  // (plantContent);
 
   const currentItem = useMemo(
     () =>
       plantContent.find((item) => item.id === currentItemId) || plantContent[0],
     [currentItemId]
   );
-  console.log(currentItem);
 
   const itemInCart = handleFindProductItemInCart(currentItem.id);
 

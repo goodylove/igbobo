@@ -25,9 +25,9 @@ const CartItems = ({ qty, product }) => {
     handleItemQtyChange(itemInCart.id, itemInCart.qty - 1);
   };
 
-  const sumTotalPrice = useMemo(() => {
-    return qty * product.price;
-  });
+  // const sumTotalPrice = useMemo(() => {
+  //   return qty * product.price;
+  // });
 
   return (
     <div className="item-in-cart">

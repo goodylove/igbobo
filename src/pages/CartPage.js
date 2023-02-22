@@ -9,6 +9,7 @@ import CartItems from "../components/cartItem/CartItems";
 
 const CartPage = () => {
   const { cart } = useContext(Context);
+
   return (
     <div className="cart-page">
       <div className="overall-wrapper">
@@ -18,8 +19,8 @@ const CartPage = () => {
           </Link>
         </div>
         <div className="cartpage-con-product">
-          {cart?.map(({ qty, product }) => {
-            return <CartItems qty={qty} product={product} />;
+          {cart?.map(({ qty, product, index }) => {
+            return <CartItems qty={qty} product={product} key={index} />;
           })}
         </div>
         <Button />
