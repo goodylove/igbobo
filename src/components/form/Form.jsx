@@ -1,5 +1,6 @@
 import React from "react";
 import { CiCreditCard1 } from "react-icons/ci";
+import Button from "../Button";
 import "./Form.css";
 const Form = () => {
   const handleClick = (e) => {
@@ -12,7 +13,7 @@ const Form = () => {
       </label>
       <span className="input-vector">
         <CiCreditCard1 className="card-icon" />
-        <input type="text" className="card-num" />
+        <input type="text" className="card-num" maxLength={15} />
       </span>
       <label htmlFor="cardnum" id="cardholder">
         Card Holder Name
@@ -31,7 +32,7 @@ const Form = () => {
         <span>
           <label htmlFor="cvv">Cvv Code</label>
 
-          <input type="text" id="cvv" placeholder="*****" />
+          <input type="text" id="cvv" placeholder="*****" maxLength={3} />
         </span>
       </div>
 
@@ -42,7 +43,8 @@ const Form = () => {
         <input type="checkbox" id="save-future" />
         <span> Save card for future</span>
       </span>
-      <button id="pay-btn-checkout">pay$500</button>
+      {/* <button id="pay-btn-checkout">Order-Now</button> */}
+      <Button>Order-Now</Button>
     </form>
   );
 };

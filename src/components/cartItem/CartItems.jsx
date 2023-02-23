@@ -2,7 +2,7 @@ import React, { useContext, useMemo } from "react";
 import "./CartItem.css";
 import { Context } from "../Context";
 
-const CartItems = ({ qty, product }) => {
+const CartItems = ({ qty, product, onClick }) => {
   const {
     items,
     currentItemId,
@@ -62,13 +62,9 @@ const CartItems = ({ qty, product }) => {
             </button>
           </div>
 
-          <div
-            className="remove-item"
-            onClick={() => handleRemoveItemFromCart(product.id)}
-          >
+          <button className="remove-item" onClick={onClick}>
             RemoveItem
-          </div>
-          {/* <button className="btn-add">CheckOut${sumTotalPrice}</button> */}
+          </button>
         </div>
       </div>
     </div>

@@ -13,6 +13,13 @@ export const Context = createContext();
 
 const ContextProvider = ({ children }) => {
   const [currentItemId, setCurrentItemId] = useState({});
+  const [animateItem, setAnimateItem] = useState(false);
+  const [animateHeart, setAnimateHeart] = useState(false);
+  const [checkItem, setCheckItem] = useState();
+  const [getValue, setGetValue] = useState(itemsCon[0].plantItems);
+  const [isChecked, setIsChecked] = useState(false);
+  const [isCartClicked, setIsCartClicked] = useState(false);
+  const idRef = useRef(null);
   const [cart, setCart] = useState([
     // {
     //   id: 1,
@@ -35,13 +42,7 @@ const ContextProvider = ({ children }) => {
     //   },
     // },
   ]);
-  const [animateItem, setAnimateItem] = useState(false);
-  const [animateHeart, setAnimateHeart] = useState(false);
-  const [checkItem, setCheckItem] = useState();
-  const [getValue, setGetValue] = useState(itemsCon[0].plantItems);
-  const [isChecked, setIsChecked] = useState(false);
-  const [isCartClicked, setIsCartClicked] = useState(false);
-  const idRef = useRef(null);
+
   const handleChange = (e) => {
     setIsChecked(e.target.checked);
 
@@ -58,14 +59,14 @@ const ContextProvider = ({ children }) => {
   );
 
   const handleRemoveItemFromCart = useCallback((itemId) => {
-    const newCart = cart.filter((item) => item.id !== itemId);
+    const newCart = cart.filter((item) => item.id === itemId);
     setCart(newCart);
   }, []);
 
   const handleAddItemToCart = useCallback(
     (producId, productPrice, productName, productImg) => {
       const item = {
-        id: cart.length,
+        id: cart.length + 1,
         qty: 1,
         product: {
           id: producId,

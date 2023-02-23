@@ -16,6 +16,7 @@ const AddToCart = () => {
     animateHeart,
     checkItem,
     getValue,
+    cart,
   } = useContext(Context);
 
   // let plantItemsCon = items[0].plantItems;
@@ -40,9 +41,11 @@ const AddToCart = () => {
   );
 
   const itemInCart = handleFindProductItemInCart(currentItem.id);
+  console.log(itemInCart);
+  console.log(cart);
 
   const handleDecreaseQty = () => {
-    if (itemInCart.qty <= 1) {
+    if (itemInCart.qty === 1) {
       handleRemoveItemFromCart(itemInCart.id);
       return;
     }

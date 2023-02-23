@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import ContextProvider from "./components/Context";
 import Shop from "./pages/Shop";
 import CartPage from "./pages/CartPage";
+import CheckOutPage from "./pages/CheckOutPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Shop />} />
           <Route path="/cartpage" element={<CartPage />} />
+          <Route path="/checkoutpage" element={<CheckOutPage />} />
         </Routes>
       </ContextProvider>
       {/* <ParentComponets /> */}

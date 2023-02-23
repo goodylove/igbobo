@@ -21,7 +21,6 @@ const Categoriesection = () => {
                   id="lant"
                   name="group1"
                   onChange={handleChange}
-                  checked={isChecked}
                 />
                 <span>Gardening</span>
               </li>
@@ -32,7 +31,6 @@ const Categoriesection = () => {
                   name="group1"
                   id="plant"
                   onChange={handleChange}
-                  checked={isChecked}
                 />
 
                 <span>plants</span>
@@ -44,38 +42,22 @@ const Categoriesection = () => {
                   name="group1"
                   id="room"
                   onChange={handleChange}
-                  checked={isChecked}
                 />
 
                 <span>rooms</span>
               </li>
               <li>
-                <input
-                  name="group1"
-                  type="radio"
-                  onChange={handleChange}
-                  checked={isChecked}
-                />
+                <input name="group1" type="radio" onChange={handleChange} />
 
                 <span>bulb</span>
               </li>
               <li>
-                <input
-                  name="group1"
-                  type="radio"
-                  onChange={handleChange}
-                  checked={isChecked}
-                />
+                <input name="group1" type="radio" onChange={handleChange} />
 
                 <span>planters</span>
               </li>
               <li>
-                <input
-                  name="group1"
-                  type="radio"
-                  onChange={handleChange}
-                  checked={isChecked}
-                />
+                <input name="group1" type="radio" onChange={handleChange} />
 
                 <span>Others</span>
               </li>
