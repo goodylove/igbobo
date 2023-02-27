@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { CiCreditCard1 } from "react-icons/ci";
-import Button from "../Button";
+import { Link } from "react-router-dom";
 import "./Form.css";
-import { Link } from "react-router-dom";
-import { Link } from "react-router-dom";
 const Form = () => {
   const {
     register,
@@ -128,9 +126,15 @@ const Form = () => {
         />
         <span> Save card for future</span>
       </span>
-      <Link>
-        <button id="pay-btn-checkout">Order-Now</button>
-      </Link>
+      {errors ? (
+        <button id="pay-btn-checkout" disabled>
+          Order-Now
+        </button>
+      ) : (
+        <Link to="/succesful">
+          <button id="pay-btn-checkout">Order-Now</button>
+        </Link>
+      )}
     </form>
   );
 };

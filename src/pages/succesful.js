@@ -4,11 +4,22 @@ import { Link } from "react-router-dom";
 
 const Succesful = () => {
   return (
-    <div>
+    <div
+      style={{
+        marginTop: "10rem",
+        height: "66vh",
+        display: "flex",
+        alignItems: "center",
+      }}
+    >
       <div></div>
-      <Link>
-        <button> Back to home</button>
-      </Link>
+      <div>
+        <Link to="/">
+          <button className="btn" style={{ padding: "10px", border: "none" }}>
+            Back to home
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };
