@@ -34,7 +34,11 @@ width: 340px;}
   width: 100%;
   text-align: center;
   margin-top: 0.3rem;
+  margin-bottom: 2rem;
   font-weight: 500;
+  border-bottom: 1px solid rgb(135, 133, 133);
+
+  padding: 10px;
 }
 .addCart-btn {
   display: flex;

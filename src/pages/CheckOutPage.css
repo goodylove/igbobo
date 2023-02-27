@@ -2,3 +2,8 @@
     margin-top: 4.5rem;
     width: 100%;
 }
+.check-cont{
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
+}

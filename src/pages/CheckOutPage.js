@@ -2,8 +2,10 @@ import React from "react";
 import { TfiClose } from "react-icons/tfi";
 
 import { Link } from "react-router-dom";
+import Animate from "./../components/AnimateImage";
 
 import CheckOut from "../components/checkout/CheckOut";
+
 import "./CheckOutPage.css";
 
 const CheckOutPage = () => {
@@ -14,8 +16,9 @@ const CheckOutPage = () => {
           <TfiClose />
         </Link>
       </div>
-      <div>
-        <CheckOut />;
+      <div className="check-cont">
+        <CheckOut />
+        <Animate />
       </div>
     </div>
   );
