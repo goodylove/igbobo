@@ -37,9 +37,13 @@ const CartPage = () => {
             );
           })}
         </div>
-        <Link to="/checkoutpage">
-          <Button>CheckOut${totalPrice}</Button>
-        </Link>
+        {cart.length < 1 ? (
+          <p>NO ITEM SELECTED</p>
+        ) : (
+          <Link to="/checkoutpage">
+            <Button>CheckOut${totalPrice}</Button>
+          </Link>
+        )}
       </div>
     </div>
   );

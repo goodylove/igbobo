@@ -41,7 +41,9 @@ const Form = () => {
           id={checkError ? "error " : ""}
         />
         {errors.cardNumber && (
-          <p style={{ color: "red" }}>Please check the First Name</p>
+          <p style={{ color: "red", fontSize: 10 }}>
+            Please check the First Name
+          </p>
         )}
       </span>
       <label htmlFor="cardholder" id="cardholder">
@@ -58,7 +60,9 @@ const Form = () => {
           id={checkError ? "error " : ""}
         />
         {errors.cardholder && (
-          <p style={{ color: "red" }}>Please check the cardHolder</p>
+          <p style={{ color: "red", margin: 0, fontSize: 10 }}>
+            Please check the cardHolder
+          </p>
         )}
       </span>
       <div className="exp-cvv-container">
@@ -74,7 +78,9 @@ const Form = () => {
             onChange={handleChange}
           />
           {errors.date && (
-            <p style={{ color: "red" }}>Please check the date </p>
+            <p style={{ color: "red", margin: 0, fontSize: 10 }}>
+              Please check the date{" "}
+            </p>
           )}
         </span>
 
@@ -90,7 +96,7 @@ const Form = () => {
             maxLength={3}
             onChange={handleChange}
           />
-          {errors.cvv && <p>Please check the cvv</p>}
+          {/* {errors.cvv && <p>Please check the cvv</p>} */}
         </span>
       </div>
 
@@ -106,7 +112,7 @@ const Form = () => {
         // id={checkError ? "error " : ""}
       />
       {errors.amount && (
-        <p style={{ color: "red", textAlign: "start" }}>
+        <p style={{ color: "red", margin: 0, fontSize: 10 }}>
           Please check the amount
         </p>
       )}
