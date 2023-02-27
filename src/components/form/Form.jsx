@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { CiCreditCard1 } from "react-icons/ci";
 import Button from "../Button";
 import "./Form.css";
+import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Form = () => {
   const {
     register,
@@ -34,7 +36,7 @@ const Form = () => {
         <input
           type="text"
           name="cardNumber"
-          {...register("cardNumber", { required: true, maxLength: 15 })}
+          {...register("cardNumber", { required: true })}
           className="card-num"
           maxLength={15}
           onChange={handleChange}
@@ -52,7 +54,7 @@ const Form = () => {
       <span className="input-vector">
         <CiCreditCard1 className="card-icon" />
         <input
-          {...register("cardHolder", { required: true })}
+          {...register("cardholder", { required: true })}
           name="cardholder"
           type="text"
           className="card-holder"
@@ -126,8 +128,9 @@ const Form = () => {
         />
         <span> Save card for future</span>
       </span>
-      <button id="pay-btn-checkout">Order-Now</button>
-      {/* <Button>Order-Now</Button> */}
+      <Link>
+        <button id="pay-btn-checkout">Order-Now</button>
+      </Link>
     </form>
   );
 };

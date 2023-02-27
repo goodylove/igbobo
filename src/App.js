@@ -8,6 +8,8 @@ import Shop from "./pages/Shop";
 import CartPage from "./pages/CartPage";
 import CheckOutPage from "./pages/CheckOutPage";
 
+import Succesful from "./pages/succesful";
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +19,7 @@ function App() {
           <Route path="/" element={<Shop />} />
           <Route path="/cartpage" element={<CartPage />} />
           <Route path="/checkoutpage" element={<CheckOutPage />} />
+          <Route path="/succesful" element={<Succesful />} />
         </Routes>
       </ContextProvider>
       {/* <ParentComponets /> */}
