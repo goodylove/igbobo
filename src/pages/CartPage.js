@@ -15,18 +15,12 @@ import CartItems from "../components/cartItem/CartItems";
 
 const CartPage = () => {
   const { cart, handleRemoveItemFromCart } = useContext(Context);
-  // console.log(cart);
+  console.log(cart);
   const totalPrice = cart.reduce((acc, item) => {
     const curentPrice = item.qty * item.product.price;
 
     return acc + curentPrice;
   }, 0);
-
-  const handleRemoveItem = (productId) => {
-    const removeItem = cart.filter((item) => item.product.id !== productId);
-    console.log(removeItem, "remove");
-    return removeItem;
-  };
 
   return (
     <div className="cart-page">
@@ -37,14 +31,9 @@ const CartPage = () => {
           </Link>
         </div>
         <div className="cartpage-con-product">
-          {cart?.map(({ qty, product, index }) => {
+          {cart?.map(({ qty, product, index, id }) => {
             return (
-              <CartItems
-                qty={qty}
-                product={product}
-                key={index}
-                onClick={() => handleRemoveItem(product.id)}
-              />
+              <CartItems qty={qty} product={product} key={index} id={id} />
             );
           })}
         </div>

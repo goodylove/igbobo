@@ -57,11 +57,23 @@ const ContextProvider = ({ children }) => {
     () => cart.reduce((acc, item) => item.qty + acc, 0),
     [cart]
   );
+  console.log(cartQuantityCount);
+  const handleRemoveItemFromCart = useCallback(
+    (itemId) => {
+      const newCart = [...cart];
+      const item = newCart.filter((item) => item.id !== itemId);
+      console.log(item);
+      setCart(item);
+      return;
+    },
+    [cart]
+  );
 
-  const handleRemoveItemFromCart = useCallback((itemId) => {
-    const newCart = cart.filter((item) => item.id === itemId);
-    setCart(newCart);
-  }, []);
+  // const handleItemRemoveFromCart = useCallback((itemId) => {
+  //   const newCart2 = cart.filter((item) => item.id !== itemId);
+  //   console.log(newCart2);
+  //   setCart(newCart2);
+  // }, []);
 
   const handleAddItemToCart = useCallback(
     (producId, productPrice, productName, productImg) => {
@@ -156,6 +168,7 @@ const ContextProvider = ({ children }) => {
       animateItem,
       animateHeart,
       handleChange,
+      // handleItemRemoveFromCart,
       checkItem,
       getValue,
     }),

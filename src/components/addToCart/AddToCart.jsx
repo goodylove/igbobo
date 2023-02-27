@@ -39,10 +39,8 @@ const AddToCart = () => {
       plantContent.find((item) => item.id === currentItemId) || plantContent[0],
     [currentItemId]
   );
-
-  const itemInCart = handleFindProductItemInCart(currentItem.id);
-  console.log(itemInCart);
   console.log(cart);
+  const itemInCart = handleFindProductItemInCart(currentItem.id);
 
   const handleDecreaseQty = () => {
     if (itemInCart.qty === 1) {
@@ -50,6 +48,7 @@ const AddToCart = () => {
       return;
     }
     handleItemQtyChange(itemInCart.id, itemInCart.qty - 1);
+    return;
   };
 
   return (

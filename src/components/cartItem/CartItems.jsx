@@ -2,7 +2,7 @@ import React, { useContext, useMemo } from "react";
 import "./CartItem.css";
 import { Context } from "../Context";
 
-const CartItems = ({ qty, product, onClick }) => {
+const CartItems = ({ qty, product, onClick, id }) => {
   const {
     items,
     currentItemId,
@@ -12,10 +12,12 @@ const CartItems = ({ qty, product, onClick }) => {
     handleRemoveItemFromCart,
     animateHeart,
     checkItem,
+    handleItemRemoveFromCart,
     getValue,
   } = useContext(Context);
 
   const itemInCart = handleFindProductItemInCart(product.id);
+  console.log(itemInCart);
 
   const handleDecreaseQty = () => {
     if (itemInCart.qty <= 1) {
@@ -62,7 +64,10 @@ const CartItems = ({ qty, product, onClick }) => {
             </button>
           </div>
 
-          <button className="remove-item" onClick={onClick}>
+          <button
+            className="remove-item"
+            onClick={() => handleRemoveItemFromCart(itemInCart.id)}
+          >
             RemoveItem
           </button>
         </div>
