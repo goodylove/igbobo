@@ -35,6 +35,9 @@
     font-weight: 400;
     font-family: cursive;
 }
+.toggle{
+    display: none;
+}
 .menu-con .list li{
     padding: 0  0.8rem;
 }
@@ -53,4 +56,24 @@
 
 .cart-con .list-cart li{
     padding: 0.4rem;
+}
+
+
+@media screen and (max-width:981px) {
+    .menu-con{
+        display: none;
+    }
+    .cart-con{
+        display: none;
+    }
+        .toggle {
+            display: flex;
+            justify-content: space-around;
+            width: 30%;
+            /* margin-left: 30px; */
+        }
+                .log-con{
+                    padding-left: 20px;
+                }
+    
 }

@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
-
+import React, { useContext, useState } from "react";
+import { FiMenu } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import LogoNav from ".././assets/Logo (1).png";
+import { MdClose } from "react-icons/md";
 import Cart from "../assets/heart.png";
 import Heart from "../assets/Group 2.png";
 import Pic from "../assets/Ellipse 1.png";
@@ -9,6 +10,7 @@ import "./Nav.css";
 import { Context } from "../Context";
 
 const Nav = () => {
+  const [navbarOpen, setNavbarOpen] = useState();
   const {
     cartQuantityCount,
     animateItem,
@@ -65,6 +67,40 @@ const Nav = () => {
             <img src={Pic} alt="" />
           </li>
         </ul>
+      </div>
+      {/* navbar */}
+      <div className="toggle">
+        <ul>
+          <li>
+            <img src={Cart} alt="" />
+            <Link to="/cartpage">
+              <button
+                ref={idRef}
+                id="cart"
+                value={cartQuantityCount}
+                className={animateItem ? "animate-num" : "num"}
+              >
+                {cartQuantityCount}
+              </button>
+            </Link>
+          </li>
+        </ul>
+
+        <button
+          className="togge"
+          onClick={() => setNavbarOpen((prev) => !prev)}
+        >
+          {navbarOpen ? (
+            <MdClose style={{ width: "32px", height: "32px" }} />
+          ) : (
+            <FiMenu
+              style={{
+                width: "32px",
+                height: "32px",
+              }}
+            />
+          )}
+        </button>
       </div>
     </div>
   );

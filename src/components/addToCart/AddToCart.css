@@ -129,3 +129,9 @@ border: none;
   font-size: 18px;
   margin: 5px;
 }
+@media screen and  (max-width: 768px){
+  .animate-num{
+    right: 90px;
+  }
+  
+}
