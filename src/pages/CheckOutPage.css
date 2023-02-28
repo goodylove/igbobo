@@ -1,15 +1,14 @@
-.c-page{
-    margin-top: 4.5rem;
-    width: 100%;
+.c-page {
+  margin-top: 4.5rem;
+  width: 100%;
 }
-.check-cont{
-    display: flex;
-        justify-content: space-around;
-        align-items: center;
+.check-cont {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-@media screen and (min-width: 400px){
-    .check-cont{
-        flex-direction: column;
-    }
-    
+@media screen and (max-width: 400px) {
+  .check-cont {
+    flex-direction: column;
+  }
 }
