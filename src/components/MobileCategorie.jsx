@@ -1,10 +1,10 @@
 import React from "react";
-const MobileCategorie = ({ onClick }) => {
+const MobileCategorie = ({ onClick, isOpen }) => {
   return (
     <>
-      <div className="categorie">
+      <div className={isOpen ? "mobile-categorie show" : "mobile-categorie"}>
         <span className="catego">Categorie</span>
-        <div className="wrap-list">
+        <div className="wrap-list" style={{ textAlign: "start" }}>
           <ul>
             <li>
               <input type="radio" id="lant" name="group1" onChange={onClick} />

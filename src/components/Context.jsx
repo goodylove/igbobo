@@ -12,6 +12,7 @@ import { itemsCon } from "./Data";
 export const Context = createContext();
 
 const ContextProvider = ({ children }) => {
+  const [navbarOpen, setNavbarOpen] = useState();
   const [currentItemId, setCurrentItemId] = useState({});
   const [animateItem, setAnimateItem] = useState(false);
   const [animateHeart, setAnimateHeart] = useState(false);
@@ -43,6 +44,10 @@ const ContextProvider = ({ children }) => {
     // },
   ]);
 
+  const handleNavBarToggle = () => {
+    setNavbarOpen((prev) => !prev);
+    return;
+  };
   const handleChange = (e) => {
     setIsChecked(e.target.checked);
 
@@ -164,6 +169,8 @@ const ContextProvider = ({ children }) => {
       show,
       isCartClicked,
       cart,
+      navbarOpen,
+      handleNavBarToggle,
 
       cartQuantityCount,
       handleAddItemToCart,
@@ -188,6 +195,7 @@ const ContextProvider = ({ children }) => {
       getValue,
       isChecked,
       show,
+      navbarOpen,
     ]
   );
 

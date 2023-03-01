@@ -3,18 +3,20 @@ import Categoriesection from "./../components/categoriesection/CategorieSection"
 import Monster from "./../components/centersection/Monster";
 import AddToCart from "./../components/addToCart/AddToCart";
 import MobileViewItem from "./../components/MobileViewItem";
+import MobileCategorie from "../components/MobileCategorie";
+
 import { Context } from "../components/Context";
-import MobileCategorie from "./../components/MobileCategorie";
 
 import "./Shop.css";
 
 const Shop = () => {
-  const { show, RemoveMobileReviewItem, handleChange } = useContext(Context);
+  const { show, RemoveMobileReviewItem, handleChange, navbarOpen } =
+    useContext(Context);
 
   return (
     <div className="shop">
-      <MobileCategorie onClick={handleChange} />
       <div className="wrapper">
+        <MobileCategorie onClick={handleChange} isOpen={navbarOpen} />
         <div className="cate">
           <Categoriesection />
         </div>

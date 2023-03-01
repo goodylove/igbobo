@@ -58,3 +58,27 @@ body {
   font-size: 12px;
   color: green;
 }
+/* #categorie {
+  transform: translateX(-600px);
+
+  transition: 0.5s;
+} */
+
+/* @media screen and (max-width: 981px) {
+  .cate {
+    display: none;
+  }
+  #categorie #show {
+    border: 1px solid rgb(198, 193, 193);
+    width: 200px;
+    padding: 0 1rem;
+    z-index: 10;
+    transform: translateX(30px);
+ 
+    transition: 0.5s;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px green;
+  }
+} */
