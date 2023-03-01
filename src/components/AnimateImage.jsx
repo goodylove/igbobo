@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import img from "../components/assets/Component 5.png";
-import { motion } from "framer-motion";
+import { motion, transform } from "framer-motion";
 
 const Animate = () => {
   const [x, setX] = useState(0);
-  const [y, sety] = useState(-800);
+  const [y, sety] = useState(-1200);
 
   useEffect(() => {
     const interval = setTimeout(() => {
       sety(0);
-      setX(-60);
+      setX(35);
     }, 2000);
     return () => clearInterval(interval);
   }, []);

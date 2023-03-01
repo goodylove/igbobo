@@ -1,29 +1,28 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Categoriesection from "./../components/categoriesection/CategorieSection";
 import Monster from "./../components/centersection/Monster";
 import AddToCart from "./../components/addToCart/AddToCart";
-
-import CheckOut from "./../components/checkout/CheckOut";
-import SinglePlant from "./../components/SinglePlant";
+import MobileViewItem from "./../components/MobileViewItem";
 import { Context } from "../components/Context";
+import MobileCategorie from "./../components/MobileCategorie";
 
 import "./Shop.css";
 
 const Shop = () => {
+  const { show, RemoveMobileReviewItem, handleChange } = useContext(Context);
+
   return (
     <div className="shop">
+      <MobileCategorie onClick={handleChange} />
       <div className="wrapper">
         <div className="cate">
           <Categoriesection />
         </div>
         <div className="mon">
           <Monster />
-          {/* <CheckOut /> */}
         </div>
         <AddToCart />
-        {/* <AddToCart /> */}
-        {/* <SinglePlant /> */}
-        {/* <CartItems /> */}
+        <MobileViewItem item={show} onClick={RemoveMobileReviewItem} />
       </div>
     </div>
   );

@@ -1,78 +1,69 @@
-
-                .input-vector{
-                    position: relative;
-                }
-                .card-icon{
-                    position: absolute;
-                  margin: 5px;
-                
-
-                }
-                label{
-                    font-size: 15px;
-                    padding: 10px 0;
-                }
-.form-control{
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-
-
+.input-vector {
+  position: relative;
 }
-
-.card-holder,.card-num{
-    width: 260px;
-    height: 30px;
-    border-radius: 4px;
-    border: 1px solid gray;
-    padding-left: 23px;
-    
-
+.card-icon {
+  position: absolute;
+  margin: 5px;
 }
-
-.exp-cvv-container{
-    display: flex;
-    justify-content: space-between;
-}
-.exp-cvv-container span{
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-} 
-#exp-date,#cvv{
-    width: 100px;
-    height: 30px;
-    border: 1px solid gray;
-        border-radius: 4px;
-        text-align: center;
-}
-#amount{
-    width: 100px;
-        height: 30px;
-       border: 1px solid gray;
-        border-radius: 4px;
-       
-}
-.save-container{
+label {
+  font-size: 15px;
   padding: 10px 0;
-font-size: 15px;
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-bottom: 10px;
+}
 
+.card-holder,
+.card-num {
+  width: 260px;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid gray;
+  padding-left: 23px;
+}
 
+.exp-cvv-container {
+  display: flex;
+  justify-content: space-between;
 }
-#save-future{
-margin: 0;
-font-size: 20px;
+.exp-cvv-container span {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
 }
-#pay-btn-checkout{
-    background-color: #00875E;
-        ;
-    color: #fff;
-    border-radius: 10px;
-    width: 240px;
-    height: 30px;
-    border: none;
-    
+#exp-date,
+#cvv {
+  width: 100px;
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  text-align: center;
 }
-#error{
-    border: 1px solid red;
+#amount {
+  width: 100px;
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+.save-container {
+  padding: 10px 0;
+  font-size: 15px;
+}
+#save-future {
+  margin: 0;
+  font-size: 20px;
+}
+#pay-btn-checkout {
+  background-color: #00875e;
+  color: #fff;
+  border-radius: 10px;
+  width: 240px;
+  height: 30px;
+  border: none;
+}
+#error {
+  border: 1px solid red;
 }

@@ -19,7 +19,7 @@ const ContextProvider = ({ children }) => {
   const [getValue, setGetValue] = useState(itemsCon[0].plantItems);
   const [isChecked, setIsChecked] = useState(false);
   const [isCartClicked, setIsCartClicked] = useState(false);
-  const idRef = useRef(null);
+  const [show, setShowItem] = useState(false);
   const [cart, setCart] = useState([
     // {
     //   id: 1,
@@ -51,6 +51,8 @@ const ContextProvider = ({ children }) => {
 
   const handleCurrentItemId = (id) => {
     setCurrentItemId(id);
+    setShowItem(true);
+    console.log("working");
   };
 
   const cartQuantityCount = useMemo(
@@ -68,6 +70,10 @@ const ContextProvider = ({ children }) => {
     },
     [cart]
   );
+
+  const RemoveMobileReviewItem = () => {
+    setShowItem(false);
+  };
 
   // const handleItemRemoveFromCart = useCallback((itemId) => {
   //   const newCart2 = cart.filter((item) => item.id !== itemId);
@@ -152,14 +158,13 @@ const ContextProvider = ({ children }) => {
 
   const contextValue = useMemo(
     () => ({
-      idRef,
-
       items: itemsCon,
       handleCurrentItemId,
       currentItemId,
-
+      show,
       isCartClicked,
       cart,
+
       cartQuantityCount,
       handleAddItemToCart,
       handleFindProductItemInCart,
@@ -171,6 +176,7 @@ const ContextProvider = ({ children }) => {
       // handleItemRemoveFromCart,
       checkItem,
       getValue,
+      RemoveMobileReviewItem,
     }),
     [
       currentItemId,
@@ -181,6 +187,7 @@ const ContextProvider = ({ children }) => {
       checkItem,
       getValue,
       isChecked,
+      show,
     ]
   );
 
