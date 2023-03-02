@@ -127,9 +127,7 @@ const Form = () => {
         <span> Save card for future</span>
       </span>
       {errors ? (
-        <button id="pay-btn-checkout" disabled>
-          Order-Now
-        </button>
+        <button id="pay-btn-checkout">Order-Now</button>
       ) : (
         <Link to="/succesful">
           <button id="pay-btn-checkout">Order-Now</button>
